@@ -1,3 +1,7 @@
+output/*
+runs/*
+studio/*
+*.svg
 *.o
 *.exe
 .DS_Store

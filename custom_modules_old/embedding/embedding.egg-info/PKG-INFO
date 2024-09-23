@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: embedding
+Version: 0.2.2
+Summary: Embed PhysiCell into Python.
+Author-email: Elmar Bucher <epbucher@iu.edu>
+Maintainer-email: Elmar Bucher <epbucher@iu.edu>
+License: BSD-3-Clause
+Project-URL: Homepage lab, http://www.mathcancer.org/
+Project-URL: Homepage project, http://physicell.org/
+Project-URL: Hompage, https://github.com/elmbeech/physicellembedding
+Project-URL: Documentation, https://github.com/elmbeech/physicellembedding/blob/main/README.md
+Project-URL: Issues, https://github.com/elmbeech/physicellembedding/issues
+Project-URL: Source, https://github.com/elmbeech/physicellembedding
+Keywords: physicell,python,c++,embedding
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: <4,>=3.8
