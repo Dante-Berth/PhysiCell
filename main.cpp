@@ -51,6 +51,10 @@ std::ofstream report_file;
 int main( int argc, char* argv[] )
 {
 	// load and parse settings file(s)
+	while (true)
+	{
+		/* code */
+	
 	
 	bool XML_status = false; 
 	char copy_command [1024]; 
@@ -222,7 +226,7 @@ int main( int argc, char* argv[] )
 	
 	std::cout << std::endl << "Total simulation runtime: " << std::endl; 
 	BioFVM::display_stopwatch_value( std::cout , BioFVM::runtime_stopwatch_value() ); 
-
+	}
 
 	return 0; 
 }
