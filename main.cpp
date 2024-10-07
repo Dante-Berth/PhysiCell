@@ -53,8 +53,7 @@ int main( int argc, char* argv[] )
 	// load and parse settings file(s)
 	while (true)
 	{
-		/* code */
-	
+
 	
 	bool XML_status = false; 
 	char copy_command [1024]; 
@@ -95,9 +94,15 @@ int main( int argc, char* argv[] )
     // Users typically start modifying here.
     random_seed();
     generate_cell_types();  // bue 20240624: delete cells; (re)load cell definitions;
+	try{
     setup_tissue();
     // Users typically stop modifying here.
-
+	}
+	catch (std::exception& e){
+	std::cout << "exception has occured!";
+    setup_tissue();
+	
+	}
     // set MultiCellDS save options
     set_save_biofvm_mesh_as_matlab(true);
     set_save_biofvm_data_as_matlab(true);
