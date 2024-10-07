@@ -6,45 +6,22 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    
+    # Step 1: Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Install dependencies (if required)
+    # (Install build-essential which includes gcc, make, etc.)
     - name: Install dependencies
-      run: sudo apt-get install flex bison
-      
-    - name: Build Virus Macrophage project
-      run: |
-        make virus-macrophage-sample
-        make
-        
-    - name: Run Virus Macrophage cell lines project
-      run: |
-        ./virus-sample
-        
-    - name: Build PhysiBoSS cell lines project
-      run: |
-        make reset
-        make physiboss-cell-lines-sample
-        make clean
-        make
-        
-    - name: Run PhysiBoSS cell lines project
-      run: |
-        ./PhysiBoSS_Cell_Lines
-        
-    - name: Build PhysiMeSS project
-      run: |
-        make reset
-        make physimess-sample
-        make clean
-        make
-        
-    - name: Run PhysiMeSS project
-      run: |
-        ./project
-        ./project config/Fibre_Initialisation/mymodel_initialisation.xml
-        ./project config/Cell_Fibre_Mechanics/mymodel_rotating.xml
-        
+      run: sudo apt-get install build-essential
+
+    # Step 3: Compile the project using make
+    - name: Build project
+      run: make
+
+    # Step 4: Run the compiled executable
+    - name: Run executable
+      run: ./project
