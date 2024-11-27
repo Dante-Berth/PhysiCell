@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/disc/a.bertin/Documents/Git/PhysiCell/hello",  // Path to the compiled binary
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "/home/disc/a.bertin/Documents/Git/PhysiCell",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",  // The task that compiles the program before debugging
+            "miDebuggerPath": "/usr/bin/gdb",  // Path to gdb (adjust for Windows or macOS)
+
+        }
+    ]
+}
