@@ -218,9 +218,17 @@ void Basic_Agent::release_internalized_substrates( void )
 	*internalized_substrates *= *fraction_released_at_death;  // what fraction is released? 
 	
 	// release this amount into the environment 
+
+	if (!pS) {
+        std::cerr << "Error: Microenvironment pointer is null." << std::endl;
+		int k = 0;
+     //   return; // Early exit if the microenvironment is null
+    }
+
+	if( current_voxel_index < sizeof(pS)){
 	
 	(*pS)(current_voxel_index) += *internalized_substrates; 
-	
+	}
 	// zero out the now-removed substrates 
 	
 	internalized_substrates->assign( internalized_substrates->size() , 0.0 ); 
