@@ -49,9 +49,9 @@
 #ifndef __BioFVM_microenvironment_h__
 #define __BioFVM_microenvironment_h__
 
-#include "../BioFVM/BioFVM_mesh.h"
-#include "../BioFVM/BioFVM_agent_container.h"
-#include "../BioFVM/BioFVM_MultiCellDS.h"
+#include "BioFVM_mesh.h"
+#include "BioFVM_agent_container.h"
+#include "BioFVM_MultiCellDS.h"
 
 namespace BioFVM{
 
@@ -187,9 +187,6 @@ class Microenvironment
 
 	void set_density( int index , std::string name , std::string units ); 
 	void set_density( int index , std::string name , std::string units , double diffusion_constant , double decay_rate ); 
-
-	void update_density( std::string name , std::string units );
-	void update_density( std::string name , std::string units, double diffusion_constant, double decay_rate );
 
 	int find_density_index( std::string name ); 
 	

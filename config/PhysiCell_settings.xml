@@ -27,7 +27,7 @@
     </parallel>
 
     <save>
-        <folder>output/tme_model</folder>
+        <folder>./output</folder>
         <full_data>
             <interval units="min">12</interval>
             <enable>true</enable>
@@ -37,8 +37,8 @@
             <enable>true</enable>
             <plot_substrate enabled="true" limits="true">
                 <substrate>stress_chemical_cc</substrate>
-                <min_conc/>
-                <max_conc/>
+                <min_conc />
+                <max_conc />
             </plot_substrate>
         </SVG>
         <legacy_data>
@@ -77,12 +77,12 @@
             <initial_condition units="dimensionless">0.0</initial_condition>
             <Dirichlet_boundary_condition units="dimensionless" enabled="False">0.0</Dirichlet_boundary_condition>
             <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False"/>
-                <boundary_value ID="xmax" enabled="False"/>
-                <boundary_value ID="ymin" enabled="False"/>
-                <boundary_value ID="ymax" enabled="False"/>
-                <boundary_value ID="zmin" enabled="False"/>
-                <boundary_value ID="zmax" enabled="False"/>
+                <boundary_value ID="xmin" enabled="False" />
+                <boundary_value ID="xmax" enabled="False" />
+                <boundary_value ID="ymin" enabled="False" />
+                <boundary_value ID="ymax" enabled="False" />
+                <boundary_value ID="zmin" enabled="False" />
+                <boundary_value ID="zmax" enabled="False" />
             </Dirichlet_options>
         </variable>
         <variable name="drug_apoptosis" units="dimensionless" ID="2">
@@ -430,7 +430,7 @@
                 <filename>rules0.csv</filename>
             </ruleset>
         </rulesets>
-        <settings/>
+        <settings />
     </cell_rules>
 
     <user_parameters>

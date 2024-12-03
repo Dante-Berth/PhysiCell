@@ -66,11 +66,7 @@ std::vector<double> operator+( const std::vector<double>& v1 , const std::vector
 {
  std::vector<double> v = v1;
  for( unsigned int i=0; i < v1.size() ; i++ )
-  if (std::isnan(v2[i])) {
-        v[i] += 0; // or simply leave this line out if you don't need to do anything
-    } else {
-        v[i] += v2[i];
-    }
+ { v[i] += v2[i]; }
  return v; 
 }
 
@@ -132,6 +128,7 @@ std::vector<double> operator-( const std::vector<double>& v1 , double d  )
 
 void operator+=( std::vector<double>& v1, const std::vector<double>& v2 )
 {
+	
  for( unsigned int i=0; i < v1.size() ; i++ )
  { v1[i] += v2[i]; }
  return; 

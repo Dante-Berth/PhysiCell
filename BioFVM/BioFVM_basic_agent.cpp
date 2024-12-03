@@ -46,27 +46,18 @@
 #############################################################################
 */
 
-#include "../BioFVM/BioFVM_basic_agent.h"
-#include "../BioFVM/BioFVM_agent_container.h"
-#include "../BioFVM/BioFVM_vector.h"
+#include "BioFVM_basic_agent.h"
+#include "BioFVM_agent_container.h"
+#include "BioFVM_vector.h" 
 
 namespace BioFVM{
 
 std::vector<Basic_Agent*> all_basic_agents(0); 
 
-// bue 20240509: movedout from Basic_Agent
-static int max_basic_agent_ID = 0;
-
-// bue 20240509: added
-void reset_max_basic_agent_ID( void )
-{
-    max_basic_agent_ID = 0;
-}
-
 Basic_Agent::Basic_Agent()
 {
 	//give the agent a unique ID  
-	//static int max_basic_agent_ID = 0;  // bue 20240509: going global
+	static int max_basic_agent_ID = 0; 
 	ID = max_basic_agent_ID; // 
 	max_basic_agent_ID++; 
 	// initialize position and velocity
@@ -218,17 +209,9 @@ void Basic_Agent::release_internalized_substrates( void )
 	*internalized_substrates *= *fraction_released_at_death;  // what fraction is released? 
 	
 	// release this amount into the environment 
-
-	if (!pS) {
-        std::cerr << "Error: Microenvironment pointer is null." << std::endl;
-		int k = 0;
-     //   return; // Early exit if the microenvironment is null
-    }
-
-	if( current_voxel_index < sizeof(pS)){
 	
 	(*pS)(current_voxel_index) += *internalized_substrates; 
-	}
+	
 	// zero out the now-removed substrates 
 	
 	internalized_substrates->assign( internalized_substrates->size() , 0.0 ); 
