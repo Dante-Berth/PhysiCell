@@ -69,170 +69,16 @@ name:
 	@echo "Executable name is" $(PROGRAM_NAME)
 	@echo ""
 
-# sample projects 	
-list-projects:
-	@echo "Sample projects: template biorobots-sample cancer-biorobots-sample cancer-immune-sample"
-	@echo "                 celltypes3-sample heterogeneity-sample pred-prey-farmer virus-macrophage-sample"
-	@echo "                 worm-sample interaction-sample mechano-sample rules-sample physimess-sample"
-	@echo ""
-	@echo "Sample intracellular projects: ode-energy-sample physiboss-cell-lines-sample cancer-metabolism-sample"
-	@echo ""
 	
-template:
-	cp ./sample_projects/template/custom_modules/* ./custom_modules/
+TME_MODEL:
+	cp ./sample_projects/TME_MODEL/custom_modules/* ./custom_modules/
 	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/template/main.cpp ./main.cpp 
+	cp ./sample_projects/TME_MODEL/main.cpp ./main.cpp 
 	cp Makefile Makefile-backup
-	cp ./sample_projects/template/Makefile .
+	cp ./sample_projects/TME_MODEL/Makefile .
 	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/template/config/* ./config/
+	cp ./sample_projects/TME_MODEL/config/* ./config/
 	
-# sample projects 
-
-# ---- non-intracellular projects 
-biorobots-sample:
-	cp ./sample_projects/biorobots/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/biorobots/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/biorobots/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/biorobots/config/* ./config/
-	
-cancer-biorobots-sample:
-	cp ./sample_projects/cancer_biorobots/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/cancer_biorobots/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/cancer_biorobots/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/cancer_biorobots/config/* ./config/
-	
-cancer-immune-sample:
-	cp ./sample_projects/cancer_immune/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/cancer_immune/main-cancer_immune_3D.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/cancer_immune/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/cancer_immune/config/* ./config/
-
-celltypes3-sample:
-	cp ./sample_projects/celltypes3/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/celltypes3/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/celltypes3/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/celltypes3/config/* ./config/	
-	
-heterogeneity-sample:
-	cp ./sample_projects/heterogeneity/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/heterogeneity/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/heterogeneity/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/heterogeneity/config/* ./config/
-	
-pred-prey-farmer:
-	cp ./sample_projects/pred_prey_farmer/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/pred_prey_farmer/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/pred_prey_farmer/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/pred_prey_farmer/config/* ./config/	
-	
-virus-macrophage-sample:
-	cp ./sample_projects/virus_macrophage/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/virus_macrophage/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/virus_macrophage/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/virus_macrophage/config/* ./config/
-	
-worm-sample:
-	cp ./sample_projects/worm/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/worm/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/worm/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/worm/config/* ./config/
-	
-interaction-sample:
-	cp ./sample_projects/interactions/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/interactions/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/interactions/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/interactions/config/* ./config/
-
-mechano-sample:
-	cp ./sample_projects/mechano/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/mechano/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/mechano/Makefile .
-	cp ./sample_projects/mechano/config/* ./config/
-
-rules-sample:
-	cp ./sample_projects/rules_sample/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/rules_sample/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/rules_sample/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects/rules_sample/config/* ./config/
-
-physimess-sample:
-	cp ./sample_projects/physimess/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects/physimess/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects/physimess/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp -r ./sample_projects/physimess/config/* ./config/
-
-# ---- intracellular projects 
-ode-energy-sample:
-	cp ./sample_projects_intracellular/ode/ode_energy/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects_intracellular/ode/ode_energy/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects_intracellular/ode/ode_energy/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects_intracellular/ode/ode_energy/config/* ./config/	
-
-physiboss-cell-lines-sample:
-	cp ./sample_projects_intracellular/boolean/physiboss_cell_lines/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects_intracellular/boolean/physiboss_cell_lines/main.cpp ./main.cpp 
-	cp Makefile Makefile-backup
-	cp ./sample_projects_intracellular/boolean/physiboss_cell_lines/Makefile .
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml 
-	cp ./sample_projects_intracellular/boolean/physiboss_cell_lines/config/* ./config/
-
-ecoli-acetic-switch-sample:
-	cp ./sample_projects_intracellular/fba/ecoli_acetic_switch/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects_intracellular/fba/ecoli_acetic_switch/main_ecoli_acetic_switch.cpp ./main.cpp
-	cp Makefile Makefile-backup
-	cp ./sample_projects_intracellular/fba/ecoli_acetic_switch/Makefile ./
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml
-	cp ./sample_projects_intracellular/fba/ecoli_acetic_switch/config/* ./config/
-
-cancer-metabolism-sample:
-	cp ./sample_projects_intracellular/fba/cancer_metabolism/custom_modules/* ./custom_modules/
-	touch main.cpp && cp main.cpp main-backup.cpp
-	cp ./sample_projects_intracellular/fba/cancer_metabolism/main.cpp ./main.cpp
-	cp Makefile Makefile-backup
-	cp ./sample_projects_intracellular/fba/cancer_metabolism/Makefile ./
-	cp ./config/PhysiCell_settings.xml ./config/PhysiCell_settings-backup.xml
-	cp ./sample_projects_intracellular/fba/cancer_metabolism/config/* ./config/
 
 
 # early examples for convergence testing 
@@ -453,7 +299,7 @@ upgrade: $(SOURCE)
 	rm -f $(SOURCE) 
 
 # use: make save PROJ=your_project_name
-PROJ := my_project
+PROJ := TME_MODEL
 
 save: 
 	echo "Saving project as $(PROJ) ... "
